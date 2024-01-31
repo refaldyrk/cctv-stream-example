@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ViewSadeng",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewSadeng.stream/"
+  },
+  {
+    "name": "ViewTugu",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewTugu.stream/"
+  },
+  {
+    "name": "ViewStasiunTugu",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewStasiunTugu.stream/"
+  },
+  {
+    "name": "ViewParangtritis",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewParangtritis.stream/"
+  },
+  {
+    "name": "ViewSimpangTugu",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewSimpangTugu.stream/"
+  },
+  {
+    "name": "ViewCandiSambisari",
+    "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewCandiSambisari.stream/"
+  }
+]
