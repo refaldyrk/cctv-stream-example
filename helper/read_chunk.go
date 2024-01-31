@@ -11,7 +11,6 @@ import (
 	"os/exec"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 )
 
@@ -21,24 +20,18 @@ type Source struct {
 }
 
 func ReadChunk() {
-	var wg sync.WaitGroup
 	for {
 		sources := ReadJSON()
 
 		for i := 0; i < len(sources); i++ {
-			wg.Add(1)
-			go processSource(sources[i], &wg)
+			processSource(sources[i])
 		}
-
-		wg.Wait()
 
 		time.Sleep(3 * time.Second)
 	}
 }
 
-func processSource(source Source, wg *sync.WaitGroup) {
-	defer wg.Done()
-
+func processSource(source Source) {
 	fmt.Println("Downloading: " + source.Name)
 	resp, err := http.Get(source.Uri + "/playlist.m3u8")
 	if err != nil {
@@ -71,8 +64,6 @@ func processSource(source Source, wg *sync.WaitGroup) {
 		fmt.Println("Downloaded: " + download)
 
 		ConvertToMp4(download, "result/"+source.Name+"/"+source.Name+strconv.Itoa(int(time.Now().Unix()))+".mp4")
-
-		time.Sleep(2 * time.Second)
 
 		if _, err := os.Stat(download); err == nil {
 			err = os.Remove(download)
