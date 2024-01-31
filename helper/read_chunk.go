@@ -27,7 +27,6 @@ func ReadChunk() {
 			processSource(sources[i])
 		}
 
-		time.Sleep(3 * time.Second)
 	}
 }
 

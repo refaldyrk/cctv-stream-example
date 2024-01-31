@@ -1,5 +1,13 @@
 [
   {
+    "name": "TransTV",
+    "uri": "https://video.detik.com/transtv/smil:transtv.smil/"
+  },
+  {
+    "name": "SimpangBalaikota",
+    "uri": "https://mam.jogjaprov.go.id:1937/atcs-kota/SimpangBalaikota.stream/"
+  },
+  {
     "name": "ViewSadeng",
     "uri": "https://mam.jogjaprov.go.id:1937/cctv-public/ViewSadeng.stream/"
   },
